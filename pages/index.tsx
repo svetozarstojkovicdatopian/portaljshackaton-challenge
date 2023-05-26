@@ -51,7 +51,7 @@ export function Datasets({ projects }) {
         </div>
     </div>
     </div>
-      <NextSeo title="GitHub Datasets" />
+      <NextSeo title="SuperDuper Awesome Data Portal" />
       <div className="bg-white min-h-screen">
         <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
           <div className="">
