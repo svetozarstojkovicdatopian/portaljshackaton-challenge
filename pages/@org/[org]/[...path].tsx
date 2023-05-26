@@ -33,7 +33,9 @@ export default function ProjectPage({ project }) {
             {project.html_url}
           </a>
         </p>
-
+        <h2>{ project.datapackage.title } </h2>
+        <h3>{ project.datapackage.description } </h3>
+        Last updated: <span className="font-semibold">{ project.datapackage.last_updated }</span>
         <h2 className="mb-0 mt-10">Files</h2>
         <div className="inline-block min-w-full py-2 align-middle">
           <table className="min-w-full divide-y divide-gray-300">
@@ -65,10 +67,11 @@ export default function ProjectPage({ project }) {
                 </tr>
               ))}
               <br></br>
+              { console.log(project) }
               {project.files.map((file) => (
                 <tr key={file.download_url}>
-                  <Table url={file.download_url}/>
-                  <FlatUiTable url={file.download_url}/>
+                    <Table url={file.download_url}/>
+                    <FlatUiTable url={file.download_url}/>
                 </tr>
               ))}
             </tbody>
