@@ -64,14 +64,12 @@ export default function ProjectPage({ project }) {
                   </td>
                 </tr>
               ))}
-              <h2>Document previews:</h2>
+              <br></br>
               {project.files.map((file) => (
-                <div key={file.download_url}>
-                  <h3>Table</h3>
+                <tr key={file.download_url}>
                   <Table url={file.download_url}/>
-                  <h3>FlatUiTable</h3>
                   <FlatUiTable url={file.download_url}/>
-                </div>
+                </tr>
               ))}
             </tbody>
           </table>
