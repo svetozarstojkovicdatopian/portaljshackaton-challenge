@@ -19,6 +19,16 @@
     "readme": "README.md"
   },
   {
+    "owner": "svetozarstojkovicdatopian",
+    "branch": "main",
+    "repo": "gold-prices",
+    "files": [
+      "data/annual.csv",
+      "data/monthly.csv"
+    ],
+    "readme": "README.md"
+  },
+  {
     "owner": "datasets",
     "branch": "master",
     "repo": "country-codes",
