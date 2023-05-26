@@ -8,12 +8,17 @@ import remarkGfm from "remark-gfm";
 import Breadcrumbs from "../../../components/_shared/Breadcrumbs";
 import parse from '../../../lib/markdown';
 import DataRichDocument from '../../../components/DataRichDocument'
+import Navbar from "../../../components/_shared/NavBar/Navbar";
+import { FlatUiTable, LineChart, Table } from "@portaljs/components";
 
 export default function ProjectPage({ project }) {
   const repoId = `@${project.repo_config.owner}/${project.repo_config.repo}`;
 
   return (
     <>
+       <div>
+        <Navbar/>
+      </div>
       <NextSeo
         title={`${repoId}${
           project.base_path !== "/" ? "/" + project.base_path : ""
@@ -58,6 +63,15 @@ export default function ProjectPage({ project }) {
                     {file.size} Bytes
                   </td>
                 </tr>
+              ))}
+              <h2>Document previews:</h2>
+              {project.files.map((file) => (
+                <div key={file.download_url}>
+                  <h3>Table</h3>
+                  <Table url={file.download_url}/>
+                  <h3>FlatUiTable</h3>
+                  <FlatUiTable url={file.download_url}/>
+                </div>
               ))}
             </tbody>
           </table>

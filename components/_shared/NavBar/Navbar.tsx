@@ -5,8 +5,6 @@ import NavItem from "./NavItem";
 
 const MENU_LIST = [
   { text: "Home", href: "/" },
-  { text: "About Us", href: "/about" },
-  { text: "Contact", href: "/contact" },
 ];
 const Navbar = () => {
   const [navActive, setNavActive] = useState(null);
@@ -16,7 +14,7 @@ const Navbar = () => {
     <header>
       <nav className={`nav`}>
         <Link href={"/"}>
-            <h1 className="logo">CodeWithMarish</h1>
+            <h1 className="logo">My SuperDuper Awesome Data Portal</h1>
         </Link>
         <div
           onClick={() => setNavActive(!navActive)}
